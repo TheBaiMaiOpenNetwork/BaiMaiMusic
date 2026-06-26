@@ -185,3 +185,26 @@ Ver [LICENSE](LICENSE) para el texto completo.
 ---
 
 <p align="center">Hecho con ♥️ por <strong>The BaiMai Open Network</strong></p>
+
+
+---
+
+## 🚀 Publicar un Release en GitHub
+
+Para publicar una nueva versión con binarios automáticos para las 3 plataformas:
+
+```bash
+# 1. Asegúrate de que tus cambios están en main
+git push origin main
+
+# 2. Crea un tag de versión (sigue semver: v1.0.0, v1.1.0, etc.)
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+El workflow de GitHub Actions compilará automáticamente:
+- 📱 `BaiMai-Music-v1.0.0-Android.apk`
+- 🪟 `BaiMai-Music-v1.0.0-Windows.zip`
+- 🐧 `BaiMai-Music-v1.0.0-Linux-amd64.deb`
+
+Y los adjuntará al Release de GitHub automáticamente.
