@@ -89,7 +89,7 @@ class _CategoryChip extends StatelessWidget {
     final theme = Theme.of(context);
     return ActionChip(
       label: Text(category), onPressed: () {},
-      backgroundColor: theme.colorScheme.surfaceContainerHighest,
+      backgroundColor: theme.colorScheme.surfaceVariant.withOpacity(0.5),
     );
   }
 }
@@ -106,7 +106,8 @@ class _SearchResultTile extends StatelessWidget {
         width: 56, height: 56,
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [theme.colorScheme.primary, theme.colorScheme.secondary]),
+            colors: [theme.colorScheme.primary.withOpacity(0.7),
+              theme.colorScheme.secondary.withOpacity(0.7)]),
           borderRadius: BorderRadius.circular(8)),
         child: const Icon(Icons.music_note, color: Colors.white),
       ),

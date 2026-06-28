@@ -55,7 +55,7 @@ class SettingsScreen extends ConsumerWidget {
                         const SizedBox(height: 4),
                         Text('v${AppConstants.appVersion}',
                           style: TextStyle(
-                            color: Theme.of(context).colorScheme.onSurface.withAlpha(128),
+                            color: Theme.of(context).colorScheme.onSurface.withOpacity(0.5),
                             fontSize: 12)),
                       ],
                     ),
@@ -190,7 +190,7 @@ class _PrimaryColorTile extends ConsumerWidget {
                     decoration: BoxDecoration(
                       color: c, shape: BoxShape.circle,
                       border: Border.all(color: isSelected ? Colors.white : Colors.transparent, width: 3),
-                      boxShadow: [BoxShadow(color: c.withAlpha(102), blurRadius: 8)]),
+                      boxShadow: [BoxShadow(color: c.withOpacity(0.4), blurRadius: 8)]),
                     child: isSelected ? const Icon(Icons.check, color: Colors.white) : null,
                   ),
                 );

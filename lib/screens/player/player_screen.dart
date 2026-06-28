@@ -16,7 +16,7 @@ class PlayerScreen extends ConsumerWidget {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter, end: Alignment.bottomCenter,
-            colors: [theme.colorScheme.primary.withAlpha(102), theme.colorScheme.surface])),
+            colors: [theme.colorScheme.primary.withOpacity(0.4), theme.colorScheme.surface])),
         child: SafeArea(
           child: Column(
             children: [
@@ -86,7 +86,7 @@ class _AlbumArt extends StatelessWidget {
                 begin: Alignment.topLeft, end: Alignment.bottomRight),
               boxShadow: [
                 BoxShadow(
-                  color: theme.colorScheme.primary.withAlpha(102),
+                  color: theme.colorScheme.primary.withOpacity(0.4),
                   blurRadius: 30, offset: const Offset(0, 15)),
               ]),
             child: const Icon(Icons.music_note_rounded, size: 120, color: Colors.white),
@@ -111,7 +111,7 @@ class _SongInfo extends StatelessWidget {
         const SizedBox(height: 4),
         Text(song?.artist ?? 'Artista desconocido',
           style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-            color: Theme.of(context).colorScheme.onSurface.withAlpha(179)),
+            color: Theme.of(context).colorScheme.onSurface.withOpacity(0.7)),
           textAlign: TextAlign.center),
       ],
     );
@@ -131,17 +131,17 @@ class _ProgressBar extends StatelessWidget {
             trackHeight: 4,
             thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 7),
             activeTrackColor: theme.colorScheme.primary,
-            inactiveTrackColor: theme.colorScheme.surfaceContainerHighest,
+            inactiveTrackColor: theme.colorScheme.surfaceVariant,
             thumbColor: theme.colorScheme.primary),
           child: Slider(value: 0.3, onChanged: (_) {}),
         ),
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('1:23', style: TextStyle(fontSize: 12)),
-              Text('3:45', style: TextStyle(fontSize: 12)),
+              Text('1:23', style: const TextStyle(fontSize: 12)),
+              Text('3:45', style: const TextStyle(fontSize: 12)),
             ],
           ),
         ),
@@ -165,7 +165,7 @@ class _PlayerControls extends StatelessWidget {
           decoration: BoxDecoration(
             shape: BoxShape.circle, color: theme.colorScheme.primary,
             boxShadow: [BoxShadow(
-              color: theme.colorScheme.primary.withAlpha(128), blurRadius: 20)]),
+              color: theme.colorScheme.primary.withOpacity(0.5), blurRadius: 20)]),
           child: IconButton(icon: const Icon(Icons.play_arrow_rounded),
             color: Colors.white, onPressed: () {}, iconSize: 48),
         ),
@@ -181,7 +181,7 @@ class _PlayerActions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         _ActionButton(icon: Icons.lyrics, label: 'Letra'),

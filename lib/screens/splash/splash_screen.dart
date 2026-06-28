@@ -47,7 +47,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 borderRadius: BorderRadius.circular(30),
                 boxShadow: [
                   BoxShadow(
-                    color: theme.colorScheme.primary.withAlpha(102),
+                    color: theme.colorScheme.primary.withOpacity(0.4),
                     blurRadius: 30, spreadRadius: 5),
                 ],
               ),
@@ -61,7 +61,7 @@ class _SplashScreenState extends State<SplashScreen> {
             const SizedBox(height: 8),
             Text('by The BaiMai Open Network',
               style: theme.textTheme.bodyMedium?.copyWith(
-                color: theme.colorScheme.onSurface.withAlpha(153)),
+                color: theme.colorScheme.onSurface.withOpacity(0.6)),
             ).animate().fadeIn(delay: 600.ms),
           ],
         ),

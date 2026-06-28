@@ -24,14 +24,15 @@ class ThemeManager {
         color: colorScheme.surface),
       navigationBarTheme: NavigationBarThemeData(
         elevation: 2,
-        indicatorColor: primaryColor.withAlpha(51),
+        indicatorColor: primaryColor.withOpacity(0.2),
         labelBehavior: NavigationDestinationLabelBehavior.alwaysShow),
-      bottomSheetTheme: const BottomSheetThemeData(
-        shape: RoundedRectangleBorder(
+      bottomSheetTheme: BottomSheetThemeData(
+        backgroundColor: colorScheme.surface,
+        shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(top: Radius.circular(24)))),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: colorScheme.surfaceContainerHighest.withAlpha(128),
+        fillColor: colorScheme.surfaceVariant.withOpacity(0.5),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide.none),
         contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14)),
@@ -55,14 +56,15 @@ class ThemeManager {
         color: colorScheme.surface),
       navigationBarTheme: NavigationBarThemeData(
         elevation: 2,
-        indicatorColor: primaryColor.withAlpha(51),
+        indicatorColor: primaryColor.withOpacity(0.2),
         labelBehavior: NavigationDestinationLabelBehavior.alwaysShow),
-      bottomSheetTheme: const BottomSheetThemeData(
-        shape: RoundedRectangleBorder(
+      bottomSheetTheme: BottomSheetThemeData(
+        backgroundColor: colorScheme.surface,
+        shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(top: Radius.circular(24)))),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: colorScheme.surfaceContainerHighest.withAlpha(77),
+        fillColor: colorScheme.surfaceVariant.withOpacity(0.3),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide.none),
         contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14)),

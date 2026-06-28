@@ -111,7 +111,8 @@ class _ArtistCard extends StatelessWidget {
               width: double.infinity,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [theme.colorScheme.primary, theme.colorScheme.secondary],
+                  colors: [theme.colorScheme.primary.withOpacity(0.6),
+                    theme.colorScheme.secondary.withOpacity(0.6)],
                   begin: Alignment.topLeft, end: Alignment.bottomRight)),
               child: const Icon(Icons.person, size: 48, color: Colors.white),
             ),
@@ -144,7 +145,8 @@ class _AlbumCard extends StatelessWidget {
               width: double.infinity,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [theme.colorScheme.tertiary, theme.colorScheme.primary])),
+                  colors: [theme.colorScheme.tertiary.withOpacity(0.6),
+                    theme.colorScheme.primary.withOpacity(0.6)])),
               child: const Icon(Icons.album, size: 48, color: Colors.white),
             ),
           ),

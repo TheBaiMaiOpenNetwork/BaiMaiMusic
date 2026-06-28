@@ -14,7 +14,7 @@ class MiniPlayer extends StatelessWidget {
         color: theme.colorScheme.primaryContainer,
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
-          BoxShadow(color: theme.colorScheme.primary.withAlpha(51),
+          BoxShadow(color: theme.colorScheme.primary.withOpacity(0.2),
             blurRadius: 12, offset: const Offset(0, 4)),
         ],
       ),

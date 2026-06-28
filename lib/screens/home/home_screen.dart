@@ -98,7 +98,7 @@ class _QuickActions extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [theme.colorScheme.primary, theme.colorScheme.primaryContainer],
+          colors: [theme.colorScheme.primary, theme.colorScheme.primary.withOpacity(0.7)],
           begin: Alignment.topLeft, end: Alignment.bottomRight),
         borderRadius: BorderRadius.circular(20),
       ),
@@ -120,7 +120,7 @@ class _QuickActions extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: Colors.white.withAlpha(51), shape: BoxShape.circle),
+              color: Colors.white.withOpacity(0.2), shape: BoxShape.circle),
             child: const Icon(Icons.play_arrow, color: Colors.white, size: 32),
           ),
         ],
@@ -194,7 +194,7 @@ class _SongCard extends StatelessWidget {
                   const SizedBox(height: 2),
                   Text(subtitle,
                     style: TextStyle(fontSize: 11,
-                      color: theme.textTheme.bodySmall?.color?.withAlpha(179)),
+                      color: theme.textTheme.bodySmall?.color?.withOpacity(0.7)),
                     maxLines: 1, overflow: TextOverflow.ellipsis),
                 ],
               ),

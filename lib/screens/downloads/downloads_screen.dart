@@ -26,7 +26,7 @@ class DownloadsScreen extends ConsumerWidget {
               child: Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: theme.colorScheme.primaryContainer,
+                  color: theme.colorScheme.primaryContainer.withOpacity(0.3),
                   borderRadius: BorderRadius.circular(12)),
                 child: Row(
                   children: [
@@ -42,7 +42,7 @@ class DownloadsScreen extends ConsumerWidget {
                           const SizedBox(height: 4),
                           Text('0 MB de 500 MB',
                             style: TextStyle(
-                              color: theme.colorScheme.onSurface.withAlpha(179),
+                              color: theme.colorScheme.onSurface.withOpacity(0.7),
                               fontSize: 12)),
                         ],
                       ),
@@ -59,13 +59,13 @@ class DownloadsScreen extends ConsumerWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(Icons.download_done, size: 80,
-                    color: theme.colorScheme.primary.withAlpha(128)),
+                    color: theme.colorScheme.primary.withOpacity(0.5)),
                   const SizedBox(height: 16),
                   Text('Sin descargas aún', style: theme.textTheme.titleMedium),
                   const SizedBox(height: 8),
                   Text('Las canciones descargadas aparecerán aquí',
                     style: theme.textTheme.bodyMedium?.copyWith(
-                      color: theme.colorScheme.onSurface.withAlpha(153))),
+                      color: theme.colorScheme.onSurface.withOpacity(0.6))),
                 ],
               ),
             ),
