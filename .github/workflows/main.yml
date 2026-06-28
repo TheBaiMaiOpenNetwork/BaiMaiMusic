@@ -1,0 +1,4 @@
+- flutter pub get
+- flutter build apk --release      # Android
+- flutter build windows --release  # Windows
+- flutter build linux --release    # Linux
